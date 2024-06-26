@@ -75,7 +75,7 @@ const SpeechToTextPage = () => {
     const lines = doc.splitTextToSize(transcribedText, 180);
     let y = 10;
 
-    lines.forEach((line, index) => {
+    lines.forEach(line => {
       if (y > pageHeight - 10) {
         doc.addPage();
         y = 10; // Reset y to top of the new page

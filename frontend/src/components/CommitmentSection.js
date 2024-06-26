@@ -29,7 +29,7 @@ const CommitmentSection = () => {
         </li>
         <li>
           <span>Versatility in Content Creation:</span> SmartCrafter.ai is more
-          than a tool; it's a creative companion. Whether you're a blogger,
+          than a tool; it is a creative companion. Whether you are a blogger,
           vlogger, or business professional, our platform adapts to your content
           creation needs.
         </li>

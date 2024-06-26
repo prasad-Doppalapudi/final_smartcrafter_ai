@@ -7,19 +7,19 @@ const WelcomeSection = () => {
       <h1>Welcome to SmartCrafter AI</h1>
       <p>
         SmartCrafter.ai empowers you with the ability to seamlessly convert text
-        to speech and speech to text in the language of your choice. But that's
+        to speech and speech to text in the language of your choice. But that is
         not all. You have the flexibility to extract audio from video and
         transcribe it or effortlessly switch the audio language.
       </p>
       <p>
-        If you’re a content creator, <span>SmartCrafter.ai</span> is your go-to
+        If you are a content creator, <span>SmartCrafter.ai</span> is your go-to
         platform. Craft SEO-friendly content on any topic, and with the option
         to change the language, publish it for users across different regions to
         engage with.
       </p>
       <p>
         Elevate your content creation experience with{' '}
-        <span>SmartCrafter.ai</span> – where language is no barrier and
+        <span>SmartCrafter.ai</span> where language is no barrier and
         possibilities are endless.
       </p>
       <div className="cta">

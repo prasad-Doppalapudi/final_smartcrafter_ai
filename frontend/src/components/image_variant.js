@@ -3,7 +3,7 @@ import axios from 'axios';
 import './image_variant.css';
 
 const ImageVariant = () => {
-  const [image, setImage] = useState(null);
+  const [setImage] = useState(null);
   const [imageURL, setImageURL] = useState('');
   const [prompt, setPrompt] = useState('');
   const [modifiedImageURL, setModifiedImageURL] = useState('');

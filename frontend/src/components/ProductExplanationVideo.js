@@ -7,10 +7,9 @@ const ProductExplanationVideo = () => {
       <h2>Product Overview</h2>
       <iframe
         src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-        //src="../frontend/public/IntroductoryVideo.mp4"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
+        allowFullScreen
         title="Product Overview Video"
       ></iframe>
     </div>
