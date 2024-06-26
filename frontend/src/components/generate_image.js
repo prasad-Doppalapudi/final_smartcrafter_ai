@@ -8,11 +8,14 @@ function GenerateImage() {
   const [imageURL, setImageURL] = useState('');
   const [error, setError] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post('http://127.0.0.1:5000/generate_image', { prompt, style });
+      const response = await axios.post(
+        'http://127.0.0.1:5000/generate_image',
+        { prompt, style },
+      );
       setImageURL(response.data.image_url);
     } catch (error) {
       setError('Error generating image. Please try again.');
@@ -22,7 +25,11 @@ function GenerateImage() {
 
   const downloadImage = async () => {
     try {
-      const response = await axios.post('http://127.0.0.1:5000/download_image', { image_url: imageURL }, { responseType: 'blob' });
+      const response = await axios.post(
+        'http://127.0.0.1:5000/download_image',
+        { image_url: imageURL },
+        { responseType: 'blob' },
+      );
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
       link.href = url;
@@ -46,7 +53,7 @@ function GenerateImage() {
               id="promptInput"
               type="text"
               value={prompt}
-              onChange={(e) => setPrompt(e.target.value)}
+              onChange={e => setPrompt(e.target.value)}
               placeholder="Enter your prompt..."
             />
           </div>
@@ -55,7 +62,7 @@ function GenerateImage() {
             <select
               id="styleSelect"
               value={style}
-              onChange={(e) => setStyle(e.target.value)}
+              onChange={e => setStyle(e.target.value)}
             >
               <option value="">Select Style</option>
               <option value="realistic">Realistic</option>
@@ -71,7 +78,9 @@ function GenerateImage() {
           <div className="generated-image">
             <h3>Generated Image</h3>
             <img src={imageURL} alt="Generated" width="256" height="256" />
-            <button className="download-button" onClick={downloadImage}>Download Image</button>
+            <button className="download-button" onClick={downloadImage}>
+              Download Image
+            </button>
           </div>
         )}
       </div>

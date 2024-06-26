@@ -3,7 +3,9 @@ import './PricingSection.css';
 
 const PricingSection = () => {
   return (
-    <div id="pricing-section" className="pricing-section"> {/* Added id attribute */}
+    <div id="pricing-section" className="pricing-section">
+      {' '}
+      {/* Added id attribute */}
       <h2>Pricing</h2>
       <div className="pricing-cards">
         <div className="pricing-card">

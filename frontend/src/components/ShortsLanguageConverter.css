@@ -1,58 +1,58 @@
 /* ShortsLanguageConverter.css */
 
 .shorts-language-converter {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .shorts-language-converter form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .shorts-language-converter label {
-    margin-bottom: 10px;
-  }
-  
-  .shorts-language-converter input[type="file"],
-  .shorts-language-converter select {
-    padding: 8px;
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  .shorts-language-converter button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .shorts-language-converter button:hover {
-    background-color: #0056b3;
-  }
-  
-  .shorts-language-converter p {
-    margin-top: 20px;
-    font-size: 16px;
-  }
-  
-  .shorts-language-converter a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #28a745;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .shorts-language-converter a:hover {
-    background-color: #218838;
-  }  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.shorts-language-converter form {
+  display: flex;
+  flex-direction: column;
+}
+
+.shorts-language-converter label {
+  margin-bottom: 10px;
+}
+
+.shorts-language-converter input[type='file'],
+.shorts-language-converter select {
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.shorts-language-converter button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.shorts-language-converter button:hover {
+  background-color: #0056b3;
+}
+
+.shorts-language-converter p {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.shorts-language-converter a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.shorts-language-converter a:hover {
+  background-color: #218838;
+}

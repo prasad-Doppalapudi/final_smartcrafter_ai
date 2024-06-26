@@ -29,29 +29,29 @@ const SpeechToTextPage = () => {
               config: {
                 encoding: 'MP3',
                 sampleRateHertz: 44100,
-                languageCode: selectedLanguage
+                languageCode: selectedLanguage,
               },
               audio: {
-                content: base64Audio
-              }
-            }
+                content: base64Audio,
+              },
+            },
           );
 
           if (response.data.results && response.data.results.length > 0) {
             setTranscribedText(
-              response.data.results[0].alternatives[0].transcript
+              response.data.results[0].alternatives[0].transcript,
             );
           } else {
             console.log(
               'No transcription results in the API response:',
-              response.data
+              response.data,
             );
             setTranscribedText('No transcription available');
           }
         } catch (error) {
           console.error(
             'Error with Google Speech-to-Text API:',
-            error.response ? error.response.data : error.message
+            error.response ? error.response.data : error.message,
           );
         }
       };
@@ -63,7 +63,9 @@ const SpeechToTextPage = () => {
   };
 
   const downloadAsTxt = () => {
-    const blob = new Blob([transcribedText], { type: 'text/plain;charset=utf-8' });
+    const blob = new Blob([transcribedText], {
+      type: 'text/plain;charset=utf-8',
+    });
     saveAs(blob, 'transcription.txt');
   };
 
@@ -72,7 +74,7 @@ const SpeechToTextPage = () => {
     const pageHeight = doc.internal.pageSize.height;
     const lines = doc.splitTextToSize(transcribedText, 180);
     let y = 10;
-  
+
     lines.forEach((line, index) => {
       if (y > pageHeight - 10) {
         doc.addPage();
@@ -81,48 +83,47 @@ const SpeechToTextPage = () => {
       doc.text(line, 10, y);
       y += 10; // Increment y position for next line
     });
-  
+
     doc.save('transcription.pdf');
   };
-  
 
   const downloadAsDocx = async () => {
     const doc = new Document({
-      sections: [{
-        properties: {},
-        children: [
-          new Paragraph(transcribedText),
-        ],
-      }],
+      sections: [
+        {
+          properties: {},
+          children: [new Paragraph(transcribedText)],
+        },
+      ],
     });
     const blob = await Packer.toBlob(doc);
     saveAs(blob, 'transcription.docx');
   };
 
   return (
-    <div className='speech-to-text-page'>
+    <div className="speech-to-text-page">
       <h2>Speech To Text</h2>
-      <div className='upload-section'>
-        <label htmlFor='audioFile'>Upload the audio file:</label>
+      <div className="upload-section">
+        <label htmlFor="audioFile">Upload the audio file:</label>
         <input
-          type='file'
-          id='audioFile'
-          accept='audio/mp3'
+          type="file"
+          id="audioFile"
+          accept="audio/mp3"
           onChange={handleAudioUpload}
-          className='file-upload'
+          className="file-upload"
         />
-        <button className='convert-button' onClick={handleConvert}>
+        <button className="convert-button" onClick={handleConvert}>
           Convert to Text
         </button>
       </div>
-      <div className='transcribed-text'>
+      <div className="transcribed-text">
         {transcribedText && (
           <div>
             <h3>Transcribed Text:</h3>
-            <div className='converted-text-box'>
+            <div className="converted-text-box">
               <p>{transcribedText}</p>
             </div>
-            <div className='download-buttons'>
+            <div className="download-buttons">
               <button onClick={downloadAsTxt}>Download as TXT</button>
               <button onClick={downloadAsPdf}>Download as PDF</button>
               <button onClick={downloadAsDocx}>Download as DOCX</button>

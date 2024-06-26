@@ -1,315 +1,319 @@
 /* App.css */
 
 .app {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
 
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 /* Add more global styles as needed */
 
 /* General container styling */
 body {
-    background-color: #f0f2f5; /* Light grey background */
-    font-family: 'Arial', sans-serif;
-    color: #333; /* Dark grey text color */
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Header styling */
-  .header {
-    background-color: white;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .header .company-logo img {
-    height: 50px;
-    cursor: pointer;
-  }
-  
-  .header .header-links {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .header .header-links span, 
-  .header .header-links a {
-    cursor: pointer;
-    padding: 10px;
-    font-size: 16px;
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .header .header-links span:hover,
-  .header .header-links a:hover {
-    color: #0056b3;
-  }
-  
-  /* Welcome Section */
-  .welcome-section {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 40px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  
-  .welcome-section h1 {
-    font-size: 2.5em;
-    color: #007bff;
-    margin-bottom: 20px;
-  }
-  
-  .welcome-section p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  .welcome-section p span {
-    color: #007bff;
-    font-weight: bold;
-  }
-  
-  .welcome-section .cta a {
-    text-decoration: none;
-    color: white;
-    background-color: #007bff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .welcome-section .cta a:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Solutions Section */
-  .solutions {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 40px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  
-  .solutions h2 {
-    font-size: 2.5em;
-    color: #007bff;
-    margin-bottom: 20px;
-  }
-  
-  .solution-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .solution {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .solution:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .solution h3 {
-    font-size: 1.8em;
-    color: #007bff;
-    margin-bottom: 10px;
-  }
-  
-  .solution p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-  }
-  
-  .solution a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .solution a:hover {
-    color: #0056b3;
-  }
-  
-  /* Commitment Section */
-  .commitment-section {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 40px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  
-  .commitment-section h2 {
-    font-size: 2.5em;
-    color: #007bff;
-    margin-bottom: 20px;
-  }
-  
-  .commitment-section p, .commitment-section li {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  .commitment-section ul {
-    padding-left: 20px;
-    text-align: left;
-  }
-  
-  .commitment-section ul li {
-    margin-bottom: 10px;
-  }
-  
-  .commitment-section ul li span {
-    font-weight: bold;
-    color: #007bff;
-  }
-  
-  .commitment-section .cta a {
-    text-decoration: none;
-    color: white;
-    background-color: #007bff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .commitment-section .cta a:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Pricing Section */
-  .pricing-section {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 40px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  
-  .pricing-section h2 {
-    font-size: 2.5em;
-    color: #007bff;
-    margin-bottom: 20px;
-  }
-  
-  .pricing-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .pricing-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .pricing-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .pricing-card h3 {
-    font-size: 1.8em;
-    color: #007bff;
-    margin-bottom: 10px;
-  }
-  
-  .pricing-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .pricing-card ul li {
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .pricing-card .cta {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .pricing-card .cta a {
-    text-decoration: none;
-    color: white;
-    background-color: #007bff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .pricing-card .cta a:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Video Section */
-  .video-section {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 40px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  
-  .video-section h2 {
-    font-size: 2.5em;
-    color: #007bff;
-    margin-bottom: 20px;
-  }
-  
-  .video-section iframe {
-    width: 100%;
-    height: 450px;
-    max-width: 800px;
-    border-radius: 8px;
-    border: none;
-  }
-  
+  background-color: #f0f2f5; /* Light grey background */
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Dark grey text color */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styling */
+.header {
+  background-color: white;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .company-logo img {
+  height: 50px;
+  cursor: pointer;
+}
+
+.header .header-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header .header-links span,
+.header .header-links a {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header .header-links span:hover,
+.header .header-links a:hover {
+  color: #0056b3;
+}
+
+/* Welcome Section */
+.welcome-section {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.welcome-section h1 {
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.welcome-section p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.welcome-section p span {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.welcome-section .cta a {
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.welcome-section .cta a:hover {
+  background-color: #0056b3;
+}
+
+/* Solutions Section */
+.solutions {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.solutions h2 {
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.solution-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.solution {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: left;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.solution:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.solution h3 {
+  font-size: 1.8em;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.solution p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.solution a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.solution a:hover {
+  color: #0056b3;
+}
+
+/* Commitment Section */
+.commitment-section {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.commitment-section h2 {
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.commitment-section p,
+.commitment-section li {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.commitment-section ul {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.commitment-section ul li {
+  margin-bottom: 10px;
+}
+
+.commitment-section ul li span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.commitment-section .cta a {
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.commitment-section .cta a:hover {
+  background-color: #0056b3;
+}
+
+/* Pricing Section */
+.pricing-section {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.pricing-section h2 {
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: left;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-card h3 {
+  font-size: 1.8em;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-card ul li {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.pricing-card .cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pricing-card .cta a {
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.pricing-card .cta a:hover {
+  background-color: #0056b3;
+}
+
+/* Video Section */
+.video-section {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.video-section h2 {
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.video-section iframe {
+  width: 100%;
+  height: 450px;
+  max-width: 800px;
+  border-radius: 8px;
+  border: none;
+}

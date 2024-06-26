@@ -22,13 +22,24 @@ const Header = () => {
   };
 
   return (
-    <div className='header'>
-      <div className='company-logo' onClick={() => navigate('/')}>
-        <img src={require('../images/logo.jpeg')} alt='Company Logo' />
+    <div className="header">
+      <div className="company-logo" onClick={() => navigate('/')}>
+        <img src={require('../images/logo.jpeg')} alt="Company Logo" />
       </div>
-      <div className='header-links'>
-        <span onClick={() => navigate('/solutions')} style={{ cursor: 'pointer', textDecoration: 'none' }}>Solutions</span> {/* Updated to navigate to /solutions */}
-        <span onClick={() => handleNavigation('/', '#pricing-section')} style={{ cursor: 'pointer', textDecoration: 'none' }}>Try it</span>
+      <div className="header-links">
+        <span
+          onClick={() => navigate('/solutions')}
+          style={{ cursor: 'pointer', textDecoration: 'none' }}
+        >
+          Solutions
+        </span>{' '}
+        {/* Updated to navigate to /solutions */}
+        <span
+          onClick={() => handleNavigation('/', '#pricing-section')}
+          style={{ cursor: 'pointer', textDecoration: 'none' }}
+        >
+          Try it
+        </span>
         {loggedIn && loggedIn ? (
           <span onClick={handleLogout}>Logout</span>
         ) : (

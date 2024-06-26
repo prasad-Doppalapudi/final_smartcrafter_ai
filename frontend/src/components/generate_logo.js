@@ -11,20 +11,20 @@ function GenerateLogo() {
     style: 'Modern',
     symbol: '',
     keywords: '',
-    audience: ''
+    audience: '',
   });
 
   const [imageURL, setImageURL] = useState('');
   const [error, setError] = useState('');
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     const { businessName, tagline, symbol } = formData;
 
@@ -44,7 +44,10 @@ function GenerateLogo() {
     setError(''); // clear previous error
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/generate_logo', formData);
+      const response = await axios.post(
+        'http://127.0.0.1:5000/generate_logo',
+        formData,
+      );
       setImageURL(response.data.image_url);
     } catch (error) {
       console.error('Error:', error);
@@ -53,7 +56,11 @@ function GenerateLogo() {
 
   const downloadImage = async () => {
     try {
-      const response = await axios.post('http://127.0.0.1:5000/download_logo', { image_url: imageURL }, { responseType: 'blob' });
+      const response = await axios.post(
+        'http://127.0.0.1:5000/download_logo',
+        { image_url: imageURL },
+        { responseType: 'blob' },
+      );
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
       link.href = url;
@@ -93,7 +100,11 @@ function GenerateLogo() {
           </label>
           <label>
             Industry:
-            <select name="industry" value={formData.industry} onChange={handleChange}>
+            <select
+              name="industry"
+              value={formData.industry}
+              onChange={handleChange}
+            >
               <option value="Technology">Technology</option>
               <option value="Healthcare">Healthcare</option>
               <option value="Finance">Finance</option>
@@ -102,7 +113,11 @@ function GenerateLogo() {
           </label>
           <label>
             Color Scheme:
-            <select name="colorScheme" value={formData.colorScheme} onChange={handleChange}>
+            <select
+              name="colorScheme"
+              value={formData.colorScheme}
+              onChange={handleChange}
+            >
               <option value="Blue">Blue</option>
               <option value="Red">Red</option>
               <option value="Green">Green</option>

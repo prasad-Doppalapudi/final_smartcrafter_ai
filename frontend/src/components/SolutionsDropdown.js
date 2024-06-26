@@ -11,11 +11,11 @@ function SolutionsDropdown({ onClose }) {
     { path: '/solutions/speech-to-text', label: 'Speech to Text' },
     { path: '/solutions/text-to-speech', label: 'Text to Speech' },
     { path: '/solutions/detach-audio', label: 'Detach Audio from Video' },
-    { path: '/solutions/content-generator', label: 'Content Creator'},
-    { path: '/solutions/image-generator', label: 'Image Generator'}
+    { path: '/solutions/content-generator', label: 'Content Creator' },
+    { path: '/solutions/image-generator', label: 'Image Generator' },
   ];
 
-  const handleClick = (path) => {
+  const handleClick = path => {
     setIsActive(false);
     onClose(); // Close the dropdown
   };
@@ -23,7 +23,7 @@ function SolutionsDropdown({ onClose }) {
   return (
     <div className={`solutions-dropdown ${isActive ? 'active' : ''}`}>
       <ul>
-        {solutions.map((solution) => (
+        {solutions.map(solution => (
           <li key={solution.path}>
             <Link to={solution.path} onClick={() => handleClick(solution.path)}>
               {solution.label}
@@ -36,4 +36,3 @@ function SolutionsDropdown({ onClose }) {
 }
 
 export default SolutionsDropdown;
-

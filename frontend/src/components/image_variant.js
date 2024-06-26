@@ -9,7 +9,7 @@ const ImageVariant = () => {
   const [modifiedImageURL, setModifiedImageURL] = useState('');
   const [option, setOption] = useState('change_background');
 
-  const handleImageUpload = (e) => {
+  const handleImageUpload = e => {
     const file = e.target.files[0];
     const reader = new FileReader();
     reader.onloadend = () => {
@@ -19,7 +19,7 @@ const ImageVariant = () => {
     reader.readAsDataURL(file);
   };
 
-  const handleOptionChange = (e) => {
+  const handleOptionChange = e => {
     setOption(e.target.value);
   };
 
@@ -27,7 +27,7 @@ const ImageVariant = () => {
     try {
       const response = await axios.post('http://127.0.0.1:5000/modifyImage', {
         image_url: imageURL,
-        prompt: `${option}: ${prompt}`
+        prompt: `${option}: ${prompt}`,
       });
       setModifiedImageURL(response.data.modified_image_url);
     } catch (error) {
@@ -45,11 +45,11 @@ const ImageVariant = () => {
           <option value="add_text">Add Text</option>
           <option value="remove">Remove</option>
         </select>
-        <input 
-          type="text" 
-          placeholder="Enter your prompt" 
-          value={prompt} 
-          onChange={(e) => setPrompt(e.target.value)} 
+        <input
+          type="text"
+          placeholder="Enter your prompt"
+          value={prompt}
+          onChange={e => setPrompt(e.target.value)}
         />
       </div>
       <button onClick={handleSubmit}>Submit</button>

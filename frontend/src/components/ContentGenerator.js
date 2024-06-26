@@ -9,48 +9,62 @@ function ContentGenerator() {
   const [generatedContent, setGeneratedContent] = useState('');
   const [error, setError] = useState('');
 
-  const allowedIndustries = ['Technology', 'Finance', 'Healthcare', 'Education', 'Entertainment'];
+  const allowedIndustries = [
+    'Technology',
+    'Finance',
+    'Healthcare',
+    'Education',
+    'Entertainment',
+  ];
 
-  const handleInputChange = (event) => {
+  const handleInputChange = event => {
     const value = event.target.value;
-    if (/drop\s+table|select\s+\*|<script>|<\/script>|porn|explicit|adult/i.test(value)) {
-      setError("Input contains restricted content.");
+    if (
+      /drop\s+table|select\s+\*|<script>|<\/script>|porn|explicit|adult/i.test(
+        value,
+      )
+    ) {
+      setError('Input contains restricted content.');
     } else if (/image|picture|photo/i.test(value)) {
-      setError("I can only help with creating articles in the fields of Technology, Finance, Healthcare, Education, Entertainment. For image-related queries, please use a different service.");
+      setError(
+        'I can only help with creating articles in the fields of Technology, Finance, Healthcare, Education, Entertainment. For image-related queries, please use a different service.',
+      );
     } else {
       setError('');
       setUserInput(value);
     }
   };
 
-  const handleIndustryChange = (event) => {
+  const handleIndustryChange = event => {
     setIndustry(event.target.value);
     setTopic(''); // Reset topic when industry changes
   };
 
-  const handleTopicChange = (event) => {
+  const handleTopicChange = event => {
     setTopic(event.target.value);
   };
 
-  const getPlaceholder = (industry) => {
+  const getPlaceholder = industry => {
     const placeholders = {
-      Technology: "e.g., AI in healthcare",
-      Finance: "e.g., Cryptocurrency trends",
-      Healthcare: "e.g., Telemedicine advancements",
-      Education: "e.g., Online learning platforms",
-      Entertainment: "e.g., Future of streaming services"
+      Technology: 'e.g., AI in healthcare',
+      Finance: 'e.g., Cryptocurrency trends',
+      Healthcare: 'e.g., Telemedicine advancements',
+      Education: 'e.g., Online learning platforms',
+      Entertainment: 'e.g., Future of streaming services',
     };
-    return placeholders[industry] || "Select an industry first...";
+    return placeholders[industry] || 'Select an industry first...';
   };
 
   const handleClick = async () => {
     if (error) {
-      alert("Please address the error before proceeding.");
+      alert('Please address the error before proceeding.');
       return;
     }
 
     if (!allowedIndustries.includes(industry)) {
-      setGeneratedContent(`I can only help with creating articles in the fields of ${allowedIndustries.join(', ')}.`);
+      setGeneratedContent(
+        `I can only help with creating articles in the fields of ${allowedIndustries.join(', ')}.`,
+      );
       return;
     }
 
@@ -59,7 +73,7 @@ function ContentGenerator() {
       prompt: `${industry}: ${userInput}`,
       industry: industry,
       topic: topic,
-      maxLength: 500 // Fixed maximum length for content
+      maxLength: 500, // Fixed maximum length for content
     };
 
     try {

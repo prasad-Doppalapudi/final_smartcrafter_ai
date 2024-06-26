@@ -22,7 +22,8 @@
   text-align: center;
 }
 
-.commitment-section p, .commitment-section li {
+.commitment-section p,
+.commitment-section li {
   font-size: 1.2em;
   color: #333;
   line-height: 1.6;

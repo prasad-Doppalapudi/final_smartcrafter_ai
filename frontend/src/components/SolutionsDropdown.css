@@ -1,42 +1,39 @@
-SolutionsDropdown.css
+SolutionsDropdown.css .solutions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  display: none;
+  background-color: #000000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+}
 
-.solutions-dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 2;
-    display: none;
-    background-color: #000000;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    border: 1px solid #ccc;
-  }
-  
-  .solutions-dropdown ul {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .solutions-dropdown li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .solutions-dropdown li:last-child {
-    border-bottom: none;
-  }
-  
-  .solutions-dropdown a {
-    text-decoration: none;
-    color: #ffffff; /* White color */
-    font-weight: bold; /* Bold text */
-  }
-  
-  /* Show the dropdown when active */
-  .solutions-dropdown.active {
-    display: block;
-  }
-  
-  .solutions-dropdown li a:hover {
-    color: #000000; /* Set your desired text color for hover state */
-  }
-  
+.solutions-dropdown ul {
+  padding: 0;
+  margin: 0;
+}
+
+.solutions-dropdown li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.solutions-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.solutions-dropdown a {
+  text-decoration: none;
+  color: #ffffff; /* White color */
+  font-weight: bold; /* Bold text */
+}
+
+/* Show the dropdown when active */
+.solutions-dropdown.active {
+  display: block;
+}
+
+.solutions-dropdown li a:hover {
+  color: #000000; /* Set your desired text color for hover state */
+}

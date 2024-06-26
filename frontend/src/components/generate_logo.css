@@ -72,8 +72,8 @@
   padding: 20px;
   text-align: center;
   display: flex;
-  flex-direction: column;  /* Added this line */
-  align-items: center;  /* Added this line */
+  flex-direction: column; /* Added this line */
+  align-items: center; /* Added this line */
 }
 
 .generated-logo img {
@@ -95,7 +95,8 @@
     align-items: center;
   }
 
-  .form, .generated-logo {
+  .form,
+  .generated-logo {
     width: 100%;
   }
 }

@@ -8,18 +8,20 @@ function ShortsLanguageConverter() {
   const [translationStatus, setTranslationStatus] = useState('');
   const [downloadUrl, setDownloadUrl] = useState('');
 
-  const handleFileChange = (e) => {
+  const handleFileChange = e => {
     setFile(e.target.files[0]);
   };
 
-  const handleLanguageChange = (e) => {
+  const handleLanguageChange = e => {
     setTargetLanguage(e.target.value);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     if (!file || !targetLanguage) {
-      setTranslationStatus('Please upload a file and select a target language.');
+      setTranslationStatus(
+        'Please upload a file and select a target language.',
+      );
       return;
     }
 
@@ -28,17 +30,23 @@ function ShortsLanguageConverter() {
     formData.append('target_language', targetLanguage);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/translate-video', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
+      const response = await axios.post(
+        'http://127.0.0.1:5000/translate-video',
+        formData,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+          withCredentials: true, // Add this line to include credentials with requests
+          timeout: 300000,
         },
-        withCredentials: true, // Add this line to include credentials with requests
-        timeout: 300000,
-      });
+      );
 
       if (response.data && response.data.translated_video_url) {
         setDownloadUrl(response.data.translated_video_url);
-        setTranslationStatus('Translation successful! Click the link below to download the video.');
+        setTranslationStatus(
+          'Translation successful! Click the link below to download the video.',
+        );
       } else {
         setTranslationStatus('Translation failed. Please try again.');
       }
@@ -80,7 +88,11 @@ function ShortsLanguageConverter() {
         <button type="submit">Convert Language</button>
       </form>
       {translationStatus && <p>{translationStatus}</p>}
-      {downloadUrl && <a href={downloadUrl} target="_blank" rel="noopener noreferrer">Download Translated Video</a>}
+      {downloadUrl && (
+        <a href={downloadUrl} target="_blank" rel="noopener noreferrer">
+          Download Translated Video
+        </a>
+      )}
     </div>
   );
 }

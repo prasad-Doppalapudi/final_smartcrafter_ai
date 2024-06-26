@@ -6,7 +6,7 @@ const DetachAudioPage = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [audioUrl, setAudioUrl] = useState('');
 
-  const handleVideoUpload = (event) => {
+  const handleVideoUpload = event => {
     const file = event.target.files[0];
     setSelectedVideo(file);
   };

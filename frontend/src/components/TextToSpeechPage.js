@@ -3,7 +3,8 @@ import './TextToSpeechPage.css';
 import { getDocument, GlobalWorkerOptions } from 'pdfjs-dist/legacy/build/pdf';
 import mammoth from 'mammoth';
 
-GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.3.136/pdf.worker.mjs'
+GlobalWorkerOptions.workerSrc =
+  'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.3.136/pdf.worker.mjs';
 const TextToSpeechPage = () => {
   const [selectedText, setSelectedText] = useState('');
   const [convertedAudio, setConvertedAudio] = useState(null);
@@ -35,7 +36,7 @@ const TextToSpeechPage = () => {
           const content = await page.getTextContent();
           text += content.items.map(item => item.str).join(' ');
         }
-     //   console.log("Extracted Text from PDF:", text); // Log the extracted text
+        //   console.log("Extracted Text from PDF:", text); // Log the extracted text
         setSelectedText(text);
       } catch (error) {
         console.error('Error loading PDF document:', error);
@@ -45,7 +46,9 @@ const TextToSpeechPage = () => {
       const result = await mammoth.extractRawText({ arrayBuffer });
       setSelectedText(result.value);
     } else {
-      alert('Unsupported file format. Please upload a .txt, .pdf, or .docx file.');
+      alert(
+        'Unsupported file format. Please upload a .txt, .pdf, or .docx file.',
+      );
     }
   };
 
@@ -63,14 +66,14 @@ const TextToSpeechPage = () => {
         {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify({
             input: { text: selectedText },
             voice: { languageCode },
-            audioConfig: { audioEncoding: 'LINEAR16' }
-          })
-        }
+            audioConfig: { audioEncoding: 'LINEAR16' },
+          }),
+        },
       );
 
       if (!response.ok) {
@@ -85,24 +88,24 @@ const TextToSpeechPage = () => {
   };
 
   return (
-    <div className='text-to-speech-page'>
+    <div className="text-to-speech-page">
       <h2>Text To Speech</h2>
-      <div className='upload-section'>
-        <label htmlFor='textFile'>Upload the text file:</label>
+      <div className="upload-section">
+        <label htmlFor="textFile">Upload the text file:</label>
         <input
-          type='file'
-          id='textFile'
-          accept='.txt,.pdf,.docx'
+          type="file"
+          id="textFile"
+          accept=".txt,.pdf,.docx"
           onChange={handleTextUpload}
         />
         <button onClick={convertToAudio}>Convert to Audio</button>
       </div>
-      <div className='converted-audio'>
+      <div className="converted-audio">
         {convertedAudio && (
-          <div className='converted-audio-box'>
-            <h3 className='converted-audio-heading'>Converted Audio:</h3>
-            <audio className='converted-audio-player' controls>
-              <source src={convertedAudio} type='audio/wav' />
+          <div className="converted-audio-box">
+            <h3 className="converted-audio-heading">Converted Audio:</h3>
+            <audio className="converted-audio-player" controls>
+              <source src={convertedAudio} type="audio/wav" />
               Your browser does not support the audio tag.
             </audio>
           </div>

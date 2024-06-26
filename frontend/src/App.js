@@ -23,11 +23,11 @@ import ProductExplanationVideo from './components/ProductExplanationVideo'; // I
 function App() {
   return (
     <BrowserRouter>
-      <div className='app'>
+      <div className="app">
         <Layout>
           <Routes>
             <Route
-              path='/'
+              path="/"
               element={
                 <div>
                   <WelcomeSection />
@@ -37,28 +37,41 @@ function App() {
                 </div>
               }
             />
-            <Route path='/solutions' element={<SolutionsPage />} /> {/* Add the new route */}
+            <Route path="/solutions" element={<SolutionsPage />} />{' '}
+            {/* Add the new route */}
             <Route
-              path='/solutions/speech-to-text'
+              path="/solutions/speech-to-text"
               element={<SpeechToTextPage />}
             />
             <Route
-              path='/solutions/text-to-speech'
+              path="/solutions/text-to-speech"
               element={<TextToSpeechPage />}
             />
             <Route
-              path='/solutions/detach-audio'
+              path="/solutions/detach-audio"
               element={<DetachAudioPage />}
             />
-            <Route path='/signupform' element={<SignupForm />} />
-            <Route path='/loginform' element={<LoginForm />} />
-            <Route path='/tryitpage' element={<TryItPage />} />
-            <Route path='/solutions/generate-content' element={<ContentGenerator />} />
-            <Route path='/solutions/generate-image' element={<GenerateImage />} />
-            <Route path='/solutions/generate-logo' element={<GenerateLogo />} />
-            <Route path='/solutions/shorts-language-converter' element={<ShortsLanguageConverter />} />
-            <Route path='/solutions/generate-video' element={<GenerateVideo />} />
-            <Route path='/solutions/image-variant' element={<EditImage />} />
+            <Route path="/signupform" element={<SignupForm />} />
+            <Route path="/loginform" element={<LoginForm />} />
+            <Route path="/tryitpage" element={<TryItPage />} />
+            <Route
+              path="/solutions/generate-content"
+              element={<ContentGenerator />}
+            />
+            <Route
+              path="/solutions/generate-image"
+              element={<GenerateImage />}
+            />
+            <Route path="/solutions/generate-logo" element={<GenerateLogo />} />
+            <Route
+              path="/solutions/shorts-language-converter"
+              element={<ShortsLanguageConverter />}
+            />
+            <Route
+              path="/solutions/generate-video"
+              element={<GenerateVideo />}
+            />
+            <Route path="/solutions/image-variant" element={<EditImage />} />
           </Routes>
         </Layout>
       </div>
