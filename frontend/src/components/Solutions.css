@@ -1,0 +1,47 @@
+.solutions {
+  padding: 20px;
+  text-align: center;
+}
+
+.solutions h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center; /* Center-align the heading */
+}
+
+.solution-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.solution {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.solution h3 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.solution p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.solution a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.solution a:hover {
+  color: #0056b3;
+}

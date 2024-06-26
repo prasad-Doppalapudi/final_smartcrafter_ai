@@ -1,0 +1,101 @@
+/* generate_logo.css */
+
+.generate-logo-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.generate-logo-heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.generate-logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form label {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.form input,
+.form select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.form input:focus,
+.form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form button {
+  padding: 15px;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+.generated-logo {
+  width: 48%;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;  /* Added this line */
+  align-items: center;  /* Added this line */
+}
+
+.generated-logo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  .generate-logo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form, .generated-logo {
+    width: 100%;
+  }
+}

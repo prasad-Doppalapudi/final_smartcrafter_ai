@@ -1,0 +1,117 @@
+/* TextToSpeechPage.css */
+
+.text-to-speech-page {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.text-to-speech-page h2 {
+  color: #007bff;
+}
+
+.upload-section {
+  margin-top: 20px;
+}
+
+.upload-section label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.upload-section input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.converted-audio {
+  margin-top: 20px;
+}
+
+.converted-audio h3 {
+  color: #007bff;
+}
+
+.language-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.question-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.yes-no-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.yes-no-section label {
+  margin-right: 10px;
+}
+
+.yes-section,
+.no-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.language-dropdown {
+  margin-bottom: 10px;
+}
+
+.language-dropdown label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.language-dropdown select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="radio"] {
+  transform: scale(1.4);
+  margin-right: 5px;
+}
+
+.yes-no-section label {
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.converted-audio-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.converted-audio-heading {
+  text-align: left;
+}
+
+.converted-audio-player {
+  align-self: center;
+}
+
+/* Add more styles as needed */
