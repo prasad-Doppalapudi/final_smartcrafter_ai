@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import WelcomeSection from './components/WelcomeSection';
-import Solutions from './components/Solutions';
+import SolutionsPage from './components/SolutionsPage'; // Import the new SolutionsPage
 import SpeechToTextPage from './components/SpeechToTextPage.js';
 import TextToSpeechPage from './components/TextToSpeechPage.js';
 import DetachAudioPage from './components/DetachAudioPage.js';
@@ -31,15 +31,13 @@ function App() {
               element={
                 <div>
                   <WelcomeSection />
-                  <div id="solutions-section">
-                    <Solutions />
-                  </div>
                   <ProductExplanationVideo />
                   <CommitmentSection />
                   <TryItSection redirectToSignup={'signupform'} />
                 </div>
               }
             />
+            <Route path='/solutions' element={<SolutionsPage />} /> {/* Add the new route */}
             <Route
               path='/solutions/speech-to-text'
               element={<SpeechToTextPage />}
