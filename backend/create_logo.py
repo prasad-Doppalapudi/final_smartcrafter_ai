@@ -1,7 +1,13 @@
 import openai
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 def generate_logo(prompt):
-    openai.api_key = "sk-proj-AqOybsp2SujrShtNXNdET3BlbkFJAeFXsRDH6sUyxhz7dUZr"
+    openai.api_key = os.getenv("LOGO_GENERATOR_API_KEY")
+    
     try:
         response = openai.Image.create(
             model="dall-e-3",
